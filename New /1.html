@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delish Recipes</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      color: #333;
+      line-height: 1.6;
+      background-color: #fff5e6;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #ff5722;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li {
+      display: inline;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #ffccbc;
+    }
+    header {
+      margin-top: 70px; /* Offset for fixed navbar */
+      background: #ffe6cc;
+      background: linear-gradient(135deg, #ffe6cc 40%, #ffc299);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      color: #333;
+    }
+    header h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+    header p {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+    }
+    header a {
+      padding: 15px 30px;
+      background: #ff5722;
+      color: white;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    header a:hover {
+      background: #e64a19;
+    }
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .category {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .category:hover {
+      transform: translateY(-5px);
+    }
+    .category img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .category h3 {
+      margin: 15px 0;
+    }
+    .newsletter {
+      background: #ff5722;
+      color: white;
+      padding: 40px 20px;
+      margin: 50px 0;
+      border-radius: 8px;
+    }
+    .newsletter input[type="email"] {
+      padding: 10px;
+      width: 300px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+    .newsletter button {
+      padding: 10px 20px;
+      background: white;
+      color: #ff5722;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .newsletter button:hover {
+      background: #fbe9e7;
+    }
+    footer {
+      background: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    footer a {
+      color: #ff5722;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Delish Recipes</div>
+  <ul>
+    <li><a href="#categories">Categories</a></li>
+    <li><a href="#newsletter">Subscribe</a></li>
+    <li><a href="#footer">Contact</a></li>
+  </ul>
+</nav>
+
+<header>
+  <h1>Welcome to Delish Recipes</h1>
+  <p>Your gateway to mouth-watering dishes and culinary adventures.</p>
+  <a href="#categories">Explore Recipes</a>
+</header>
+
+<section id="categories">
+  <h2>Recipe Categories</h2>
+  <div class="categories">
+    <div class="category">
+      <img src="https://images.kitchenstories.io/communityImages/f4604e05f6a9eaca99afddd69e849005_c02485d4-0841-4de6-b152-69deb38693f2.jpg" alt="Breakfast">
+      <h3>Breakfast</h3>
+    </div>
+    <div class="category">
+      <img src="https://images.immediate.co.uk/production/volatile/sites/30/2023/03/Sumac-turkey-stuffed-pittas-73482d5.jpg?quality=90&resize=556,505" alt="Lunch">
+      <h3>Lunch</h3>
+    </div>
+    <div class="category">
+      <img src="https://i.pinimg.com/736x/e8/bb/fe/e8bbfef4616d2bbee9a9f0cd3f35ded5.jpg" alt="Dessert">
+      <h3>Dessert</h3>
+    </div>
+    <div class="category">
+      <img src="https://www.hotelierindia.com/cloud/2024/10/20/indian-tea-time-snacks-in-group-sev-chivda-farsan-mixture-bakarwadi-served-in-different-bowls-free-photo-1.jpg" alt="Snacks">
+      <h3>Snacks</h3>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter" id="newsletter">
+  <h2>Subscribe to Our Newsletter</h2>
+  <p>Get the latest recipes straight to your inbox!</p>
+  <form>
+    <input type="email" placeholder="Enter your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+<footer id="footer">
+  <p>&copy; 2024 Delish Recipes. Designed with ❤️.</p>
+  <p>Follow us on <a href="#">Facebook</a>, <a href="#">Instagram</a>, and <a href="#">Twitter</a>.</p>
+</footer>
+
+</body>
+</html>
