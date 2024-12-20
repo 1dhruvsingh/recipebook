@@ -1,0 +1,114 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ff6347;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #ffd700;
+  }
+  
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    background: url('https://source.unsplash.com/1600x900/?food,cooking') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+    background: #ffd700;
+    color: #333;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  .cta-button:hover {
+    background: #fff;
+  }
+  
+  /* Sections */
+  .section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background: #f4f4f4;
+  }
+  
+  .section:nth-child(even) {
+    background: #fff;
+  }
+  
+  .section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Footer */
+  .footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+  }
