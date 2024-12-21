@@ -1,58 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Haven</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delish Recipes</title>
+  <link rel="stylesheet" href="style1.css">
 </head>
 <body>
-    <header>
-        <nav id="navbar">
-            <div class="container">
-                <h1>Recipe Haven</h1>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#recipes">Recipes</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <h2>Welcome to Recipe Haven</h2>
-            <p>Your go-to place for delicious recipes!</p>
-            <a href="#recipes" class="btn">Explore Recipes</a>
-        </div>
-    </section>
+<nav>
+  <div class="logo">Delish Recipes</div>
+  <ul>
+    <li><a href="#categories">Categories</a></li>
+    <li><a href="#newsletter">Subscribe</a></li>
+    <li><a href="#footer">Contact</a></li>
+  </ul>
+</nav>
 
-    <section id="recipes" class="recipes">
-        <div class="container">
-            <h2>Featured Recipes</h2>
-            <div class="recipe-card">
-                <h3>Spaghetti Carbonara</h3>
-                <p>A classic Italian pasta dish.</p>
-            </div>
-            <div class="recipe-card">
-                <h3>Chicken Tikka Masala</h3>
-                <p>A flavorful Indian curry.</p>
-            </div>
-            <div class="recipe-card">
-                <h3>Chocolate Cake</h3>
-                <p>Rich and moist chocolate cake.</p>
-            </div>
-        </div>
-    </section>
+<header>
+  <h1>Welcome to Delish Recipes</h1>
+  <p>Your gateway to mouth-watering dishes and culinary adventures.</p>
+  <a href="#categories">Explore Recipes</a>
+</header>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Recipe Haven. All rights reserved.</p>
-        </div>
-    </footer>
+<section id="categories">
+  <h2>Recipe Categories</h2>
+  <div class="categories">
+    <div class="category">
+      <img src="https://images.kitchenstories.io/communityImages/f4604e05f6a9eaca99afddd69e849005_c02485d4-0841-4de6-b152-69deb38693f2.jpg" alt="Breakfast">
+      <h3>Breakfast</h3>
+    </div>
+    <div class="category">
+      <img src="https://images.immediate.co.uk/production/volatile/sites/30/2023/03/Sumac-turkey-stuffed-pittas-73482d5.jpg?quality=90&resize=556,505" alt="Lunch">
+      <h3>Lunch</h3>
+    </div>
+    <div class="category">
+      <img src="https://i.pinimg.com/736x/e8/bb/fe/e8bbfef4616d2bbee9a9f0cd3f35ded5.jpg" alt="Dessert">
+      <h3>Dessert</h3>
+    </div>
+    <div class="category">
+      <img src="https://www.hotelierindia.com/cloud/2024/10/20/indian-tea-time-snacks-in-group-sev-chivda-farsan-mixture-bakarwadi-served-in-different-bowls-free-photo-1.jpg" alt="Snacks">
+      <h3>Snacks</h3>
+    </div>
+  </div>
+</section>
 
-    <script src="script.js"></script>
+<section class="newsletter" id="newsletter">
+  <h2>Subscribe to Our Newsletter</h2>
+  <p>Get the latest recipes straight to your inbox!</p>
+  <form>
+    <input type="email" placeholder="Enter your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+<footer id="footer">
+  <p>&copy; 2024 Delish Recipes. Designed with ❤️.</p>
+  <p>Follow us on <a href="#">Facebook</a>, <a href="#">Instagram</a>, and <a href="#">Twitter</a>.</p>
+</footer>
+
 </body>
 </html>
