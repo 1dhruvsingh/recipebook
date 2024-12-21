@@ -1,46 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recipe Booklet</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Haven</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">Recipe Booklet</div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#recipes">Recipes</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <nav id="navbar">
+            <div class="container">
+                <h1>Recipe Haven</h1>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#recipes">Recipes</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-  <section class="hero">
-    <h1>Welcome to Recipe Booklet</h1>
-    <p>Your ultimate destination for delicious recipes!</p>
-    <a href="#recipes" class="cta-button">Explore Recipes</a>
-  </section>
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Welcome to Recipe Haven</h2>
+            <p>Your go-to place for delicious recipes!</p>
+            <a href="#recipes" class="btn">Explore Recipes</a>
+        </div>
+    </section>
 
-  <section id="about" class="section">
-    <h2>About Us</h2>
-    <p>Discover a variety of recipes curated with love. Perfect for food enthusiasts and home chefs!</p>
-  </section>
+    <section id="recipes" class="recipes">
+        <div class="container">
+            <h2>Featured Recipes</h2>
+            <div class="recipe-card">
+                <h3>Spaghetti Carbonara</h3>
+                <p>A classic Italian pasta dish.</p>
+            </div>
+            <div class="recipe-card">
+                <h3>Chicken Tikka Masala</h3>
+                <p>A flavorful Indian curry.</p>
+            </div>
+            <div class="recipe-card">
+                <h3>Chocolate Cake</h3>
+                <p>Rich and moist chocolate cake.</p>
+            </div>
+        </div>
+    </section>
 
-  <section id="recipes" class="section">
-    <h2>Recipes</h2>
-    <p>From quick snacks to gourmet meals, find recipes that suit your taste.</p>
-  </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Recipe Haven. All rights reserved.</p>
+        </div>
+    </footer>
 
-  <section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <p>Have questions? Reach out to us for more information!</p>
-  </section>
-
-  <footer class="footer">
-    <p>&copy; 2024 Recipe Booklet. All rights reserved.</p>
-  </footer>
+    <script src="script.js"></script>
 </body>
 </html>
