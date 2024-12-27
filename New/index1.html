@@ -4,46 +4,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Delish Recipes</title>
-  <link rel="stylesheet" href="style1.css">
-  <link rel="icon" type="image/jpg" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLe3jBZAN0Tr_nuBfbFXQRBzEIUChz_2stOg&s">
+  <link rel="stylesheet" href="s1.css">
+  <link rel="icon" type="image/jpg" href="logo.png">
+  <script src="script.js"></script>
 </head>
 <body>
 
-<nav>
-  <div class="logo">Delish Recipes</div>
-  <ul>
-    <li><a href="#categories">Categories</a></li>
-    <li><a href="#newsletter">Subscribe</a></li>
-    <li><a href="#footer">Contact</a></li>
-  </ul>
-</nav>
+  <nav>
+    <div class="logo">Delish Recipes</div>
+    <ul>
+      <li>
+        <a href="#categories">Categories</a>
+        <div class="nav-categories">
+          <a href="breakfast.html"><i>🍳</i> Breakfast</a>
+          <a href="lunch.html"><i>🍜</i> Lunch</a>
+          <a href="dessert.html"><i>🍰</i> Dessert</a>
+          <a href="snacks.html"><i>🍿</i> Snacks</a>
+          <a href="drinks.html"><i>🍹</i> Drinks</a>
+        </div>
+      </li>
+      <li><a href="#newsletter">Subscribe</a></li>
+      <li><a href="#footer">Contact</a></li>
+    </ul>
+  </nav>
 
-<header>
-  <h1>Welcome to Delish Recipes</h1>
-  <p>Your gateway to mouth-watering dishes and culinary adventures.</p>
-  <a href="#categories">Explore Recipes</a>
-  <br>
-  <a href="ownrecipes.html">Put in recipe</a>
-</header>
+  <header>
+    <div class="header-bg"></div>
+    <div class="header-content">
+      <h1>Welcome to Delish Recipes</h1>
+      <p>Your gateway to mouth-watering dishes and culinary adventures.</p>
+      <a href="#categories">Explore Recipes</a>
+      <a href="ownrecipes.html">Put in recipe</a>
+    </div>
+    <div class="scroll-indicator">↓</div>
+  </header>
 
 <section id="categories">
   <h2>Recipe Categories</h2>
   <div class="categories">
     <div class="category">
-      <img src="https://images.kitchenstories.io/communityImages/f4604e05f6a9eaca99afddd69e849005_c02485d4-0841-4de6-b152-69deb38693f2.jpg" alt="Breakfast">
-      <h3>Breakfast</h3>
+      <img src="breakfast.jpg" alt="Breakfast" width="100%" height="100%">
+      <a href="breakfast.html">Breakfast</a>
     </div>
     <div class="category">
-      <img src="https://images.immediate.co.uk/production/volatile/sites/30/2023/03/Sumac-turkey-stuffed-pittas-73482d5.jpg?quality=90&resize=556,505" alt="Lunch">
-      <h3>Lunch</h3>
+      <img src="lunch.jpg" alt="Lunch" width="100%" height="100%">
+      <a href="lunch.html">Lunch</a>
     </div>
     <div class="category">
-      <img src="https://i.pinimg.com/736x/e8/bb/fe/e8bbfef4616d2bbee9a9f0cd3f35ded5.jpg" alt="Dessert">
-      <h3>Dessert</h3>
+      <img src="dessert.jpg" alt="Dessert" width="100%" height="100%">
+      <a href="dessert.html">Dessert</a>
     </div>
     <div class="category">
-      <img src="https://www.hotelierindia.com/cloud/2024/10/20/indian-tea-time-snacks-in-group-sev-chivda-farsan-mixture-bakarwadi-served-in-different-bowls-free-photo-1.jpg" alt="Snacks">
-      <h3>Snacks</h3>
+      <img src="snacks.jpg" alt="Snacks" width="100%" height="100%">
+      <a href="snacks.html">Snacks</a>
+    </div>
+    <div class="category">
+      <img src="drinks.jpeg" alt="Snacks" width="100%" height="100%">
+      <a href="drinks.html">Drinks</a>
     </div>
   </div>
 </section>
