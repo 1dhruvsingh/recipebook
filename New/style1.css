@@ -142,8 +142,11 @@
     height: auto; /* Maintain aspect ratio */
     border-radius: 8px; /* Optional: add some styling */
   }
-  .category h3 {
+  .category a {
     margin: 15px 0;
+    font-size: medium;
+    color: #000000;
+    font-weight: bolder;
   }
   .newsletter {
     background: #399918; /* Olive Green */
