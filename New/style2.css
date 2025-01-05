@@ -5,7 +5,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url('cooking.jpg');
+    background-image: url('recipe.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -13,9 +13,10 @@ body {
 }
 
 h1 {
-    color: #e6a557;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #ff0062;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.378);
     margin: 2rem 0;
+    text-align: left
 }
 
 form {
@@ -23,7 +24,7 @@ form {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    width: 90%;
+    width: 27%;
     max-width: 600px;
     margin: 0 auto 2rem auto;
 }
