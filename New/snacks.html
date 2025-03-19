@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snack Recipes</title>
+    <link rel="stylesheet" href="category.css">
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-analytics.js";
+  import { firebaseConfig } from "./cred.js"; // Import config
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+
+        // Function to fetch snack recipes from Firestore
+        async function fetchSnackRecipes() {
+          const recipeContainer = document.getElementById("recipe-container");
+          recipeContainer.innerHTML = "<p>Loading recipes...</p>";
+
+          try {
+            // Get all documents from the "snacks" subcollection inside "savedrecipes"
+            const querySnapshot = await getDocs(collection(db, "savedrecipes", "snacks", "recipes"));
+
+            recipeContainer.innerHTML = ""; // Clear loading message
+
+            if (querySnapshot.empty) {
+              recipeContainer.innerHTML = "<p>No snack recipes found.</p>";
+              return;
+            }
+
+            querySnapshot.forEach((doc) => {
+              const recipe = doc.data();
+              const recipeDiv = document.createElement("div");
+              recipeDiv.classList.add("recipe-card");
+
+              recipeDiv.innerHTML = `
+        <h2>${recipe.dishName}</h2>
+        <p><strong>Calories:</strong> ${recipe.calories ? recipe.calories : "N/A"}</p>
+        
+        <div class="recipe-details" style="display: none;">
+          <p><strong>Healthiness:</strong> ${recipe.healthiness}</p>
+          <p><strong>Preparation Time:</strong> ${recipe.prepTime} mins</p>
+          <h3>Ingredients:</h3>
+          <ul>${recipe.ingredients.map(ing => `<li>${ing}</li>`).join("")}</ul>
+        </div>
+        
+        <button class="toggle-btn">Show More</button>
+      `;
+
+      recipeContainer.appendChild(recipeDiv);
+
+      // Add event listener to toggle the recipe details
+      const toggleBtn = recipeDiv.querySelector(".toggle-btn");
+      const detailsDiv = recipeDiv.querySelector(".recipe-details");
+
+      toggleBtn.addEventListener("click", () => {
+        if (detailsDiv.style.display === "none") {
+          detailsDiv.style.display = "block";
+          toggleBtn.textContent = "Show Less";
+        } else {
+          detailsDiv.style.display = "none";
+          toggleBtn.textContent = "Show More";
+        }
+      });
+    });
+
+          } catch (error) {
+            console.error("Error fetching snack recipes:", error);
+            recipeContainer.innerHTML = "<p>Error loading recipes. Please try again.</p>";
+          }
+        }
+
+        // Fetch snack recipes when the page loads
+        window.onload = fetchSnackRecipes;
+
+    </script>
+</head>
+<body>
+    <a href="index1.html" class="back-button">← Back to Home</a>
+    <h1>Snack Recipes</h1>
+    <div id="recipe-container"></div>
+
+</body>
+</html>

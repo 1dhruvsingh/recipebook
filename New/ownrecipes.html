@@ -8,7 +8,8 @@
 </head>
 <body>
   <h1>Submit Your Recipe</h1>
-<form action="/submit-recipe" method="POST">
+  <form id="recipeForm">
+
     <label for="dishName">Name of the Dish:</label>
     <input type="text" id="dishName" name="dishName" required>
 
@@ -19,8 +20,12 @@
     <select id="category" name="category" required>
         <option value="breakfast">Breakfast</option>
         <option value="lunch">Lunch</option>
-        <option value="dinner">Dinner</option>
+        <option value="dessert">Dessert</option>
         <option value="snack">Snack</option>
+        <option value="brunch">Brunch</option>
+        <option value="drinks">Drinks</option>
+        <option value="appetizer">Appetizers</option>
+        <option value="Dinner">Dinner</option>
     </select>
 
     <label for="healthiness">Healthiness:</label>
@@ -39,4 +44,54 @@
 </form>
 
 </body>
+<script type="module">
+ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-analytics.js";
+  import { firebaseConfig } from "./cred.js"; // Import config
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+
+// Handle form submission
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("recipeForm");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const dishName = document.getElementById("dishName").value;
+    const ingredients = document.getElementById("ingredients").value.split("\n");
+    const category = document.getElementById("category").value; // Get selected category
+    const healthiness = document.getElementById("healthiness").value;
+    const prepTime = document.getElementById("prepTime").value;
+    const calories = document.getElementById("calories").value || "Not Provided";
+
+    // Recipe object
+    const newRecipe = {
+      dishName,
+      ingredients,
+      category,
+      healthiness,
+      prepTime,
+      calories
+    };
+
+    try {
+      // Add recipe to the main "savedrecipes" collection
+      await addDoc(collection(db, "savedrecipes"), newRecipe);
+
+      // Add recipe to the respective category subcollection (e.g., savedrecipes/breakfast)
+      await addDoc(collection(db, `savedrecipes/${category}/recipes`), newRecipe);
+
+      alert(`Recipe added successfully to 'savedrecipes' and '${category}' category!`);
+      form.reset();
+    } catch (error) {
+      console.error("Error adding recipe: ", error);
+      alert("Error saving recipe. Please try again.");
+    }
+  });
+});
+
+</script>
 </html>

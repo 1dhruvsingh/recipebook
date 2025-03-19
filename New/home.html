@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Recipe Categories</title>
+    <link rel="stylesheet" href="home.css">
+    <style>
+        body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f5f0;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+#categories {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #ff6b6b;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.category {
+    position: relative;
+    height: 320px;
+    perspective: 1000px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.category img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.category:hover img,
+.category a:hover {
+    transform: rotateY(10deg) scale(1.05);
+}
+
+.category a {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.category a:hover {
+    background: #ff6b6b;
+    color: white;
+}
+
+.newsletter {
+    margin: 50px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    max-width: 500px;
+    text-align: center;
+}
+
+.newsletter input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.newsletter button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.newsletter button:hover {
+    background-color: #ff5252;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .categories {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .category {
+        height: 250px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Our Recipe Collection</h1>
+        <p>Explore delicious recipes categorized for your convenience!</p>
+    </header>
+
+    <section id="categories">
+        <h2>Recipe Categories</h2>
+        <div class="categories">
+            <div class="category">
+                <img src="https://images.kitchenstories.io/communityImages/f4604e05f6a9eaca99afddd69e849005_c02485d4-0841-4de6-b152-69deb38693f2.jpg" alt="Breakfast">
+                <a href="breakfast.html">Breakfast</a>
+            </div>
+            <div class="category">
+                <img src="https://www.eatingwell.com/thmb/zSh86Cx-fybgBu5-baxombw1OiA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/diy-taco-lunch-box-54f8791776b64900b285fbfc22a4f0bc.jpg" alt="Lunch">
+                <a href="lunch.html">Lunch</a>
+            </div>
+            <div class="category">
+                <img src="https://nutricia.com.au/fortisip/wp-content/uploads/sites/8/2020/09/Forticreme-Chocolate-Chocolate-Layered-Dessert-1-scaled.jpeg" alt="Dessert">
+                <a href="dessert.html">Dessert</a>
+            </div>
+            <div class="category">
+                <img src="https://www.hotelierindia.com/cloud/2024/10/20/indian-tea-time-snacks-in-group-sev-chivda-farsan-mixture-bakarwadi-served-in-different-bowls-free-photo-1.jpg" alt="Snacks">
+                <a href="snacks.html">Snacks</a>
+            </div>
+            <div class="category">
+                <img src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/peach-iced-tea-c5aa1bb.jpg?quality=90&resize=500,454" alt="Drinks">
+                <a href="drinks.html">Drinks</a>
+            </div>
+            <div class="category">
+                <img src="https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FFood%20Fest%202021%2FBrunch%20Fest%2FPhoto%2F2021-03-30_ATK-47735-no-whip_no-yolk-break_3-2" alt="Brunch">
+                <a href="brunch.html">Brunch</a>
+            </div>
+            <div class="category">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFNreYBTzSfigL_P8qak_76h7QhtYZd4hDWQ&s" alt="Appetizers">
+                <a href="appetizers.html">Appetizers</a>
+            </div>
+    
+        </div>
+    </section>
+
+    <section class="newsletter" id="newsletter">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Get the latest recipes straight to your inbox!</p>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+</body>
+</html>

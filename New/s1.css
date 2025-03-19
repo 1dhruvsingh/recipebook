@@ -161,8 +161,8 @@ header a:hover {
   transition: transform 0.6s;
   transform-style: preserve-3d;
 }
-
-.category:hover img {
+.category:hover img,
+.category a:hover{
   transform: rotateY(10deg) scale(1.05);
 }
 
@@ -176,6 +176,7 @@ header a:hover {
   color: #333;
   font-weight: bold;
   border-radius: 25px;
+  transition: transform 0.6s;
   transform: translateZ(50px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
