@@ -1,0 +1,21 @@
+{
+  "hosting": {
+    "headers": [
+      {
+        "source": "/cred.js",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          }
+        ]
+      }
+    ]
+  },
+  "emulators": {
+    "dataconnect": {
+      "dataDir": "dataconnect/.dataconnect/pgliteData",
+      "source": "dataconnect"
+    }
+  }
+}
