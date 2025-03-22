@@ -1,0 +1,13 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+import { getFirestore } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyB1dYxaB44HLuPuQgJLaydt-BaPdUjKNv4",
+  authDomain: "recipebook-70d41.firebaseapp.com",
+  projectId: "recipebook-70d41",
+  storageBucket: "recipebook-70d41.firebasestorage.app",
+  messagingSenderId: "1078689292747",
+  appId: "1:1078689292747:web:b0de9a971a071965f9164e",
+  measurementId: "G-QCTN6YN7HX"
+};
+export default firebaseConfig;
